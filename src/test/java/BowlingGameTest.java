@@ -21,4 +21,15 @@ public class BowlingGameTest {
         Integer result = bowlingGame.sum_strike(10,3,5);
         assertEquals(score,result);
     }
+
+    @Test
+    void should_return_score_when_sum_given_spare(){
+
+        BowlingGame bowlingGame = new BowlingGame();
+
+        Integer score = 20;
+
+        Integer result = bowlingGame.sum_spare(6,4,10);
+        assertEquals(score,result);
+    }
 }
