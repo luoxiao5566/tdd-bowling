@@ -87,6 +87,7 @@ public class BowlingGameTest {
         int result1 = bowlingGame.sum_total_score(competition_record1);
         int result2 = bowlingGame.sum_total_score(competition_record2);
         int result3 = bowlingGame.sum_total_score(competition_record3);
+
         assertEquals(score1,result1);
         assertEquals(score2,result2);
         assertEquals(score3,result3);
