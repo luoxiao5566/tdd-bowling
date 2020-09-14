@@ -11,5 +11,21 @@ public class BowlingGame {
     public Integer sum_spare(int first_pin, int second_pin, int next_pin) {
         return first_pin+second_pin+next_pin;
     }
+
+
+    public int sum_total_score(int[] competition_record) {
+        int number_of_rounds = 0;
+        int rounds_sign = 0;
+        int score = 0;
+        while (number_of_rounds<10){
+            if (number_of_rounds<10&&(competition_record[rounds_sign]+competition_record[rounds_sign+1]<10)){
+                score += sum_twice_Pitching(competition_record[rounds_sign],competition_record[rounds_sign+1]);
+                number_of_rounds++;
+                rounds_sign += 2;
+                continue;
+            }
+        }
+        return score;
+    }
 }
 
