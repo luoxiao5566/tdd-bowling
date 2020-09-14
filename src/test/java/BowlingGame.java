@@ -1,5 +1,11 @@
 public class BowlingGame {
-    public Integer twice_Pitching_less_than_10_pin(int number_of_first_pin, int number_of_second_pin) {
-        return number_of_first_pin+number_of_second_pin;
+    public Integer sum_twice_Pitching(int first_pin, int second_pin) {
+        return first_pin + second_pin;
+    }
+
+
+    public Integer sum_strike(int strike, int next_first_pin, int next_second_pin) {
+        return strike+next_first_pin+next_second_pin;
     }
 }
+
