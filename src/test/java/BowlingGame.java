@@ -30,6 +30,12 @@ public class BowlingGame {
                 rounds_sign += 1;
                 continue;
             }
+            if (competition_record[rounds_sign] + competition_record[rounds_sign+1] == 10){
+                score += sum_spare(competition_record[rounds_sign],competition_record[rounds_sign+1],competition_record[rounds_sign+2]);
+                number_of_rounds++;
+                rounds_sign += 2;
+                continue;
+            }
 
 
         }

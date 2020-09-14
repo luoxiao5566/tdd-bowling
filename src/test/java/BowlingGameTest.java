@@ -57,4 +57,17 @@ public class BowlingGameTest {
         int result = bowlingGame.sum_total_score(competition_record);
         assertEquals(score,result);
     }
+
+    @Test
+    void should_return_score_when_sum_total_score_given_bowling_game_over_of_all_spare(){
+
+        BowlingGame bowlingGame = new BowlingGame();
+
+        int score = 155;
+
+        int [] competition_record = {5,5,6,4,3,7,8,2,1,9,2,8,7,3,4,6,9,1,5,5,10};
+
+        int result = bowlingGame.sum_total_score(competition_record);
+        assertEquals(score,result);
+    }
 }
