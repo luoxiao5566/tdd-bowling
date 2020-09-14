@@ -18,12 +18,20 @@ public class BowlingGame {
         int rounds_sign = 0;
         int score = 0;
         while (number_of_rounds<10){
-            if (number_of_rounds<10&&(competition_record[rounds_sign]+competition_record[rounds_sign+1]<10)){
+            if (competition_record[rounds_sign]+competition_record[rounds_sign+1]<10){
                 score += sum_twice_Pitching(competition_record[rounds_sign],competition_record[rounds_sign+1]);
                 number_of_rounds++;
                 rounds_sign += 2;
                 continue;
             }
+            if (competition_record[rounds_sign] == 10){
+                score += sum_strike(competition_record[rounds_sign],competition_record[rounds_sign+1],competition_record[rounds_sign+2]);
+                number_of_rounds++;
+                rounds_sign += 1;
+                continue;
+            }
+
+
         }
         return score;
     }

@@ -45,4 +45,16 @@ public class BowlingGameTest {
         int result = bowlingGame.sum_total_score(competition_record);
         assertEquals(score,result);
     }
+    @Test
+    void should_return_score_when_sum_total_score_given_bowling_game_over_of_all_strike(){
+
+        BowlingGame bowlingGame = new BowlingGame();
+
+        int score = 300;
+
+        int [] competition_record = {10,10,10,10,10,10,10,10,10,10,10,10};
+
+        int result = bowlingGame.sum_total_score(competition_record);
+        assertEquals(score,result);
+    }
 }
